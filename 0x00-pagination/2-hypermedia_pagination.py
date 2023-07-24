@@ -66,43 +66,43 @@ class Server:
         """Implement a get_hyper method that takes the same arguments
         (and defaults) as get_page and returns a dictionary containing
         the following key-value pairs:
-        
+
         page_size: the length of the returned dataset page
         page: the current page number
         data: the dataset page (equivalent to return from previous task)
         next_page: number of the next page, None if no next page
         prev_page: number of the previous page, None if no previous page
         total_pages: the total number of pages in the dataset as an integer
-        
+
         Make sure to reuse get_page in your implementation.
         """
         assert type(page) is int and page > 0
         assert type(page_size) is int and page_size > 0
-        
+
         data = self.get_page(page, page_size)
-        
-        #find total pages
-        total_pages = math.ceil(len(self.dataset())/ page_size)
+
+        # Find total pages
+        total_pages = math.ceil(len(self.dataset()) / page_size)
 
         start, end = index_range(page, page_size)
 
-        #find the next page
+        # Find the next page
         if (page < total_pages):
             next_page = page + 1
         else:
             next_page = None
 
-        #Find the previous
+        # Find the previous
         if (page == 1):
             prev_page = None
         else:
             prev_page = page - 1
-            
-        return{
+
+        return {
             'page_size': len(data),
-            'page' : page,
-            'data' : data,
-            'next_page' : next_page,
-            'prev_page' : prev_page,
-            'total_pages' : total_pages
+            'page': page,
+            'data': data,
+            'next_page': next_page,
+            'prev_page': prev_page,
+            'total_pages': total_pages
         }
