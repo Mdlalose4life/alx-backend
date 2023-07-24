@@ -58,6 +58,6 @@ class Server:
 
         try:
             start, end = index_range(page, page_size)
-            return data
+            return data[start:end]
         except IndexError:
             return []
