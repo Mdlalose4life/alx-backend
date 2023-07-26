@@ -34,8 +34,7 @@ class FIFOCache(BaseCaching):
             pass
         else:
             # Length of the catch must not exceed the limits
-            if len(self.cache_data) >= BaseCaching.MAX_ITEMS \
-                    and key not in self.cache_data.keys():
+            if len(self.cache_data) >= BaseCaching.MAX_ITEMS and key not in self.cache_data.keys():
                 # Find the first element on the catch
                 oldest_key = next(iter(self.cache_data.keys()))
                 # Delete that first element
