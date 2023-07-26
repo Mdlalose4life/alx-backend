@@ -16,16 +16,20 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
-    """
+    """ The BasicCatch class
     """
 
     def __init__(self):
         """
+        Inheriting from the Base
         """
         super().__init__()
 
     def put(self, key, item):
         """
+        Args: 
+                key(type): _descriptor_
+                item(type): _descriptor_
         """
         if key is None or item is None:
             pass
@@ -34,6 +38,8 @@ class BasicCache(BaseCaching):
 
     def get(self, key):
         """
+                Args: 
+                key(type): _descriptor_
         """
         if key is None or key not in self.cache_data.keys():
             return None
