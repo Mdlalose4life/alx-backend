@@ -3,6 +3,7 @@
 """
 BaseCaching = __import__('base_caching').BaseCaching
 
+
 class BasicCache(BaseCaching):
     """
     """
@@ -18,7 +19,6 @@ class BasicCache(BaseCaching):
             pass
         else:
             self.cache_data[key] = item
-
 
     def get(self, key):
         """
