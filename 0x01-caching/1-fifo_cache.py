@@ -16,6 +16,8 @@ If key is None or if the key doesn’t exist in self.cache_data, return None.
 BaseCaching = __import__('base_caching').BaseCaching
 
 class FIFOCache(BaseCaching):
+    """FIFO class that inherits from BaseCaching
+    """
     def __init__(self):
         """Inherits the methods from BaseCaching
         """
