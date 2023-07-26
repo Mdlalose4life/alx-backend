@@ -27,7 +27,7 @@ class BasicCache(BaseCaching):
 
     def put(self, key, item):
         """
-        Args: 
+        Args:
                 key(type): _descriptor_
                 item(type): _descriptor_
         """
@@ -38,7 +38,7 @@ class BasicCache(BaseCaching):
 
     def get(self, key):
         """
-                Args: 
+                Args:
                 key(type): _descriptor_
         """
         if key is None or key not in self.cache_data.keys():
