@@ -15,8 +15,8 @@ class Config(object):
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 @app.route('/')
-def hello_world():
-    """Hello
+def index():
+    """timezones
     """
     return render_template('1-index.html')
 
