@@ -50,7 +50,7 @@ def before_request() -> None:
 @babel.localeselector
 def get_locale():
     """Returns:
-                    _type_: _description_
+        _type_: _description_
     """
     locale = request.args.get('locale')
     if locale in app.config['LANGUAGES']:
