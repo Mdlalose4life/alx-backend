@@ -1,5 +1,5 @@
 #!/usr/bin/yarn dev
-import { Job, createQueu } from 'kue'
+import { createQueu } from 'kue'
 
 const queue = createQueu();
 
